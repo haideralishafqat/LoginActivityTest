@@ -20,111 +20,48 @@
         android:visibility="gone" />
 
     <ScrollView
-        android:id="@+id/login_form"
+        android:id="@+id/selection_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/email_login_form"
+            android:id="@+id/selection_registration_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <AutoCompleteTextView
-                    android:id="@+id/firstNameET"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/first_name"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/lastNameET"
-                android:layout_width="match_parent"
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/last_name"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_sign_in_short"
-                android:imeOptions="actionUnspecified"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:singleLine="true" />
-
-        </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/emailET"
-                    android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/radioGroup"
+                android:gravity="center">
+                <RadioButton android:id="@+id/radio_buyer"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/passwordET"
-                    android:layout_width="match_parent"
+                    android:text="@string/prompt_buyer"
+                    android:tag="buyer" />
+                <RadioButton android:id="@+id/radio_seller"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/confirmPasswordET"
-                    android:layout_width="match_parent"
+                    android:text="@string/prompt_seller"
+                    android:tag="seller" />
+                <RadioButton android:id="@+id/radio_buyerSeller"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:hint="@string/confrim_pass"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:text="@string/prompt_buyer_seller"
+                    android:tag="buyerseller" />
 
-            </android.support.design.widget.TextInputLayout>
-
+            </RadioGroup>
 
             <Button
-                android:id="@+id/signInBtnId"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
+                android:id="@+id/nextBtnId"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/submit"
-                android:textStyle="bold" />
+                android:layout_gravity="center"
+                android:text="Next" />
+
 
         </LinearLayout>
     </ScrollView>
